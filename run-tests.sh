@@ -7,12 +7,12 @@ echo "Testing composites..."
 while read line 
 do
     echo "Testing $line"
-    echo $(./miller-rabin -n $line -k 1)
+    echo $(./miller-rabin -n $line -k 5)
 done < "$composites"
 
 echo "Testing primes..."
 while read line 
 do
     echo "Testing $line"
-    echo $(./miller-rabin -n $line -k 1)
+    echo $(./miller-rabin -n $line -k 5)
 done < "$primes"
